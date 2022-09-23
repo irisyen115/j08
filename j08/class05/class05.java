@@ -5,18 +5,22 @@ class CBox {
     int width;
     int height;
 
+    // (b)
     int volume() {
         return length * width * height;
     }
 
+    // (c)
     int surfaceArea() {
-        return length * width * 6;
+        return (length * width * 2) + (width * height * 2) + (length * height * 2);
     }
 
+    // (d)
     void showData() {
         System.out.println("length=" + length + "," + "width=" + width + "," + "height=" + height);
     }
 
+    // (e)
     void showAll() {
         System.out.println("length=" + length + "," + "width=" + width + "," + "height=" + height + "," + "volume="
                 + volume() + "," + "surfaceArea=" + surfaceArea());
@@ -25,9 +29,9 @@ class CBox {
 
 public class class05 {
     public static void main(String[] args) {
-        CBox box;
-        box = new CBox();
+        CBox box = new CBox();
 
+        // (a)
         box.height = 1;
         box.length = 1;
         box.width = 1;

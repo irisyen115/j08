@@ -4,9 +4,9 @@ class CCircle {
     double pi = 3.14;
     double radius;
 
-    CCircle(double pi, double radius) {
-        this.pi = pi;
-        this.radius = 5.0;
+    // (c)
+    void setRadius(double r) {
+        radius = r;
     }
 
     void show_periphery() {
@@ -16,8 +16,13 @@ class CCircle {
 
 public class class06 {
     public static void main(String[] args) {
-        CCircle cir1 = new CCircle(3.14, 3.0);
+        // (a) (b)
+        CCircle cir1 = new CCircle();
+        cir1.radius = 3.0;
+        System.out.println("radius=" + cir1.radius);
 
+        cir1.setRadius(5.0);
+        // (d)
         cir1.show_periphery();
     }
 }

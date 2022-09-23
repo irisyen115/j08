@@ -5,28 +5,34 @@ class CCalculator {
     int b;
     int c;
 
+    // (a)
     void set_value(int x, int y, int z) {
         x = a;
         y = b;
         z = c;
     }
 
+    // (b)
     void show() {
         System.out.println(a + "," + b + "," + c);
     }
 
+    // (c)
     int add() {
         return a + b + c;
     }
 
+    // (d)
     int sub() {
         return a - b - c;
     }
 
+    // (e)
     int mul() {
         return a * b * c;
     }
 
+    // (f)
     double avg() {
         double d = (a + b + c);
         return d / 3;
