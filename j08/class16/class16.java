@@ -6,24 +6,29 @@ class CSphere {
     private int z;
     private int radius;
 
+    // (a)
     void setLocation(int a, int b, int c) {
         x = a;
         y = b;
         z = c;
     }
 
+    // (b)
     void setRadius(int r) {
         radius = r;
     }
 
+    // (c)
     double surfaceArea() {
         return 4 * 3.14 * Math.pow(radius, 2);
     }
 
+    // (d)
     double volumn() {
         return 0.75 * 3.14 * Math.pow(radius, 3);
     }
 
+    // (d)
     void showCenter() {
         System.out.println("x=" + x + "," + "y=" + y + "," + "z=" + z);
     }

@@ -3,20 +3,21 @@ package class13;
 class CCircle {
     double pi = 3.14;
 
+    // (a)
     double area(double r) {
         return Math.pow(r, 2) * pi;
     }
 
+    // (b)
     float area(float r) {
         double a = (Math.pow(r, 2) * pi);
         float ans = (float) a;
         return ans;
     }
 
-    int area(int r) {
-        double a = (Math.pow(r, 2) * pi);
-        int ans = (int) a;
-        return ans;
+    // (c)
+    double area(int r) {
+        return (Math.pow(r, 2) * pi);
     }
 }
 
