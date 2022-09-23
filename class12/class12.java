@@ -1,3 +1,5 @@
+package class12;
+
 class CWin {
     int width;
     int height;

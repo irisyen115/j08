@@ -1,3 +1,5 @@
+package class05;
+
 class CBox {
     int length;
     int width;

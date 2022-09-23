@@ -1,3 +1,5 @@
+package class07;
+
 class CTest {
   void test(int a) {
     if (a == 0) {

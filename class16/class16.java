@@ -1,3 +1,5 @@
+package class16;
+
 class CSphere {
     private int x;
     private int y;
