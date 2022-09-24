@@ -9,10 +9,10 @@ class CCircle {
     }
 
     // (b)
+    // float ans =
     float area(float r) {
         double a = (r * r * pi);
-        float ans = (float) a;
-        return ans;
+        return (float) a;
     }
 
     // (c)

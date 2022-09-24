@@ -25,7 +25,7 @@ class CSphere {
 
     // (d)
     double volumn() {
-        return (double) 4 / 3 * 3.14 * radius * radius * radius;
+        return 4.0 / 3 * 3.14 * radius * radius * radius;
     }
 
     // (d)

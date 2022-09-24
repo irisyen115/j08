@@ -6,10 +6,11 @@ class CCalculator {
     int c;
 
     // (a)
+    // fixup / wait for reply
     void set_value(int x, int y, int z) {
-        x = a;
-        y = b;
-        z = c;
+        a = x;
+        b = y;
+        c = z;
     }
 
     // (b)
