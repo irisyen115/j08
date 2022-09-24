@@ -5,19 +5,19 @@ class CCircle {
 
     // (a)
     double area(double r) {
-        return Math.pow(r, 2) * pi;
+        return r * r * pi;
     }
 
     // (b)
     float area(float r) {
-        double a = (Math.pow(r, 2) * pi);
+        double a = (r * r * pi);
         float ans = (float) a;
         return ans;
     }
 
     // (c)
     double area(int r) {
-        return (Math.pow(r, 2) * pi);
+        return (r * r * pi);
     }
 }
 

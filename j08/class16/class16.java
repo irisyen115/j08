@@ -20,12 +20,12 @@ class CSphere {
 
     // (c)
     double surfaceArea() {
-        return 4 * 3.14 * Math.pow(radius, 2);
+        return 4 * 3.14 * radius * radius;
     }
 
     // (d)
     double volumn() {
-        return 0.75 * 3.14 * Math.pow(radius, 3);
+        return (double) 4 / 3 * 3.14 * radius * radius * radius;
     }
 
     // (d)

@@ -42,13 +42,10 @@ class CCalculator {
 public class class09 {
     public static void main(String[] args) {
         CCalculator test = new CCalculator();
-        int x = 25;
-        int y = 3;
-        int z = 7;
-        test.a = x;
-        test.b = y;
-        test.c = z;
-        test.set_value(x, y, z);
+        test.a = 25;
+        test.b = 3;
+        test.c = 7;
+        test.set_value(25, 3, 7);
         test.show();
         System.out.println(test.add());
         System.out.println(test.sub());
