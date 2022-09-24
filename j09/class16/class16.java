@@ -1,5 +1,4 @@
 // package class16;
-
 // class CCircle {
 // private static double pi = 3.14;
 // private double radius;

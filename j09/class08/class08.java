@@ -51,7 +51,6 @@
 // System.out.println("color=" + rWin.color + "," + "width=" + rWin.width + ","
 // + "height=" + rWin.height);
 // rWin.count();
-// rWin.count();
 // System.out.println(rWin.cnt);
 // rWin.setZero();
 // System.out.println(rWin.cnt);

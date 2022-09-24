@@ -1,4 +1,4 @@
-// package class06;
+// // package class06;
 // // public class class06 {
 // // public static void main(String[] args) {
 // // System.out.println(add2n(5));

@@ -1,4 +1,4 @@
-// package class07;
+// // package class07;
 // // public class class07 {
 // // public static void main(String[] args) {
 // // System.out.println(power(2, 5));

@@ -1,5 +1,4 @@
 // package class19;
-
 // class Data {
 // private String name;
 // private Test score;

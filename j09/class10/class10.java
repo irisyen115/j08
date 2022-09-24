@@ -1,5 +1,4 @@
 // package class10;
-
 // class CRational {
 // public int n;
 // public int d;
