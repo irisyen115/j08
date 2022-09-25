@@ -6,11 +6,8 @@ public class class06 {
         System.out.println(add2n(10));
     }
 
+    // fixup - no need for recursion
     public static int add2n(int n) {
-        if (n == 1) {
-            return 1;
-        } else {
-            return n + add2n(n - 1);
-        }
+        return ((1 + n) * n) / 2;
     }
 }

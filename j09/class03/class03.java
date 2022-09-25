@@ -1,6 +1,6 @@
 class Caaa {
     // private int value;
-    public int value;
+    private int value;
 
     // (a)
     public Caaa() {
@@ -21,11 +21,10 @@ public class class03 {
         Caaa obj1 = new Caaa();
         // 12-16行
         Caaa obj2 = new Caaa(12);
-
-        System.out.println(obj1.value);
-        System.out.println(obj2.value);
     }
 }
 
+// d - fixup
+
 // Add.(c)不行，因為一個文件只能有一個跟文件名一樣的class
-// (d)會，因為原本的private value只能在Caaa這個class運作，換成public才能在main裡面運作
+// (d)不會，因為沒有抽取value
