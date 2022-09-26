@@ -33,3 +33,5 @@ public class class05 {
         CCount.count();
     }
 }
+// (d) 類別變數，因為需要知曉所有物件就必須要用static
+// (e) 都可以
