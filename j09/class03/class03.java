@@ -27,4 +27,4 @@ public class class03 {
 // d - fixup
 
 // Add.(c)不行，因為一個文件只能有一個跟文件名一樣的class
-// (d)不會，因為沒有抽取value
+// (d)不會，因為value沒有在main拿來用

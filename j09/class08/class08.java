@@ -7,18 +7,20 @@ class CWin {
 
     // (a)
     public static void count() {
-        cnt++;
+        System.out.println(cnt);
     }
 
     // (b)
     CWin(String str, int w, int h) {
+        cnt++;
         color = str;
         width = w;
         height = h;
     }
 
-    // (c)
+    // (c)    
     CWin() {
+        cnt++;
         color = "red";
         width = 2;
         height = 2;
@@ -36,12 +38,12 @@ class CWin {
 }
 
 public class class08 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {   
+        CWin win = new CWin();
         CWin.count();
-        System.out.println(CWin.cnt);
         CWin.setZero();
-        System.out.println(CWin.cnt);
-        CWin.setValue(10);
-        System.out.println(CWin.cnt);
+        CCount.count();
+        CWin.setValue(10);        
+        CWin.count();
     }
 }

@@ -2,9 +2,12 @@ class CCount {
 
     // (a)
     public static int cnt = 0;
+    CCount() {
+        cnt++;
+    }
 
     public static void count() {
-        cnt++;
+        System.out.println(cnt);
     }
 
     // (b)
@@ -22,12 +25,11 @@ class CCount {
 
 public class class05 {
     public static void main(String[] args) {
+        CCount count = new CCount();
         CCount.count();
-        CCount.count();
-        System.out.println(CCount.cnt);
         CCount.setZero();
-        System.out.println(CCount.cnt);
+        CCount.count();
         CCount.setValue(8);
-        System.out.println(CCount.cnt);
+        CCount.count();
     }
 }
