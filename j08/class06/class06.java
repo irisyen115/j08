@@ -6,7 +6,7 @@ class CCircle {
 
     // (c)
     void setRadius(double r) {
-        radius = r;
+        this.radius = r;
     }
 
     void show_periphery() {

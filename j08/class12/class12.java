@@ -19,7 +19,7 @@ class CWin {
     }
 
     // (b)
-    void setWindow(int w, int h) {
+    void setWindows(int w, int h) {
         width = w;
         height = h;
     }
@@ -43,7 +43,7 @@ public class class12 {
         cw.setName("My Windows");
         cw.setW(5);
         cw.setH(3);
-        cw.setWindow(5, 3);
+        cw.setWindows(5, 3);
         cw.setWindows(5, 3, "My windows");
         cw.show();
     }
