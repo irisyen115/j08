@@ -1,11 +1,13 @@
+package class19;
+
 class Data {
     private String name;
     private Test score;
 
     // (a)
-    class Test {
-        public int english;
-        public int math;
+    private class Test {
+        private int english;
+        private int math;
 
         // (b)
         Test(int eng, int m) {

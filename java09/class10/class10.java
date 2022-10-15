@@ -30,12 +30,12 @@ public class class10 {
         CRational bbb = new CRational();
         bbb.setND(3, 4);
         bbb.show();
-        show(3, 8);
+        show(aaa);
     }
 
     // (b)
 
-    public static void show(int n, int d) {
-        System.out.println(n + "/" + d);
+    public static void show(CRational ra) {
+        System.out.println(ra.n + "/" + ra.d);
     }
 }

@@ -1,3 +1,5 @@
+package class15;
+
 class CCircle {
     private static double pi = 3.14;
     private double radius;
@@ -17,7 +19,7 @@ class CCircle {
     public static double average(CCircle c[]) {
         double sum = 0;
         for (int i = 0; i < c.length; i++) {
-            sum += (double) (c[i].radius);
+            sum += (c[i].radius);
         }
         return sum / c.length;
     }

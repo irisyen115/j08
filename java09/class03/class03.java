@@ -1,3 +1,5 @@
+package class03;
+
 class Caaa {
     // private int value;
     private int value;

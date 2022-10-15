@@ -1,12 +1,14 @@
+package class17;
+
 class Namecard {
     private String name;
     private String address;
     private Phone data;
 
     // (a)
-    class Phone {
-        public String company;
-        public String cell;
+    private class Phone {
+        private String company;
+        private String cell;
 
         // (b)
         Phone(String s1, String s2) {
