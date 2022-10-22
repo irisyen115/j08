@@ -1,16 +1,14 @@
-package class03;
+package class13;
 
 class Caaa {
     public int num1;
     public int num2;
 
-    // (a)
     public Caaa() {
         num1 = 1;
-        num2 = 1;
+        num2 = 2;
     }
 
-    // (b)
     public Caaa(int a, int b) {
         num1 = a;
         num2 = b;
@@ -23,17 +21,19 @@ class Caaa {
 }
 
 class Cbbb extends Caaa {
-    // (c)
+    public Cbbb() {
+        super();
+    }
+
     public Cbbb(int a, int b) {
-        super(a, b);
+        num1 = a;
+        num2 = b;
     }
 }
 
-public class class03 {
+public class class13 {
     public static void main(String[] args) {
-        // (d)
-        new Caaa().show(); // d-(a)
-        new Caaa(3, 9).show(); // d-(b)
-        new Cbbb(2, 5).show(); // d-(c)
+        Caaa caa = new Cbbb();
+        caa.show();
     }
 }

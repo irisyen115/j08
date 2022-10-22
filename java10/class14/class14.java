@@ -1,19 +1,26 @@
-package class03;
+package class14;
 
 class Caaa {
     public int num1;
     public int num2;
 
-    // (a)
     public Caaa() {
         num1 = 1;
         num2 = 1;
     }
 
-    // (b)
     public Caaa(int a, int b) {
         num1 = a;
         num2 = b;
+    }
+}
+
+class Cbbb extends Caaa {
+    public Cbbb() {
+    }
+
+    public Cbbb(int a, int b) {
+        super(a, b);
     }
 
     void show() {
@@ -22,18 +29,9 @@ class Caaa {
     }
 }
 
-class Cbbb extends Caaa {
-    // (c)
-    public Cbbb(int a, int b) {
-        super(a, b);
-    }
-}
-
-public class class03 {
+public class class14 {
     public static void main(String[] args) {
-        // (d)
-        new Caaa().show(); // d-(a)
-        new Caaa(3, 9).show(); // d-(b)
-        new Cbbb(2, 5).show(); // d-(c)
+        Cbbb cbb = new Cbbb(5, 3);
+        cbb.show();
     }
 }

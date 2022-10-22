@@ -2,9 +2,9 @@ package class08;
 
 class CWin {
     public static int cnt = 0;
-    public String color;
-    public int width;
-    public int height;
+    private String color;
+    private int width;
+    private int height;
 
     // (a)
     public static void count() {
@@ -22,9 +22,13 @@ class CWin {
     // (c)
     CWin() {
         cnt++;
-        color = "red";
+        color = "Red";
         width = 2;
         height = 2;
+    }
+
+    void show() {
+        System.out.println("color=" + color + " " + "width=" + width + " " + "height=" + height);
     }
 
     // (d)
@@ -41,9 +45,9 @@ class CWin {
 public class class08 {
     public static void main(String[] args) {
         CWin win1 = new CWin();
-        System.out.println("color=" + win1.color + " " + "width=" + win1.width + " " + "height=" + win1.height);
-        CWin win2 = new CWin("bull", 5, 10);
-        System.out.println("color=" + win2.color + " " + "width=" + win2.width + " " + "height=" + win2.height);
+        win1.show();
+        CWin win2 = new CWin("Bule", 5, 10);
+        win2.show();
         CWin.count();
         CWin.setZero();
         CWin.count();
