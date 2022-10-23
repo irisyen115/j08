@@ -1,8 +1,8 @@
 package class14;
 
 class Caaa {
-    public int num1;
-    public int num2;
+    protected int num1;
+    protected int num2;
 
     public Caaa() {
         num1 = 1;

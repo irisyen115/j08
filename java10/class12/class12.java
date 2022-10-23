@@ -1,75 +1,81 @@
 package class12;
 
 class CShape {
-    protected int num;
+    protected String name;
 
     protected double area() {
         return 0.0;
     }
 
-    CShape(int _num) {
-        num = _num;
+    protected String getName() {
+        return name;
     }
 
     static void largest(CShape[] shapes) {
         double max = -1;
-        int maxi = 0;
-        String[] shape = { "Circle", "Square", "Triangle" };
+        CShape maxShape = null;
         for (int i = 0; i < shapes.length; i++) {
             if (shapes[i].area() > max) {
                 max = shapes[i].area();
-                maxi = i;
+                maxShape = shapes[i];
             }
         }
-        System.out.println(shape[maxi] + " " + maxi + " is max area");
+        System.out.println("max area=" + maxShape.getName() + " " + max);
     }
 }
 
 class CCircle extends CShape {
-    protected double pi = 3.14;
+    private static double pi = 3.14;
+    private int radius;
 
     CCircle(int _num) {
-        super(_num);
+        radius = _num;
+        name = "Circle";
     }
 
     public double area() {
-        return num * num * pi;
+        return radius * radius * pi;
     }
 }
 
 class CSquare extends CShape {
+    private int edge;
 
     CSquare(int _num) {
-        super(_num);
+        edge = _num;
+        name = "Square";
     }
 
     public double area() {
-        return num * num;
+        return edge * edge;
     }
 }
 
 class CTriangle extends CShape {
+    private int base;
     private int height;
 
     CTriangle(int _num, int _height) {
-        super(_num);
+        base = _num;
         height = _height;
-
+        name = "Triangle";
     }
 
     public double area() {
-        return (num * height) / 2;
+        return (base * height) / 2;
     }
 }
 
 public class class12 {
     public static void main(String[] args) {
-        CShape shp[] = new CShape[5];
+        /* 少一個 XD */
+        CShape shp[] = new CShape[6];
         shp[0] = new CCircle(50);
         shp[1] = new CCircle(21);
         shp[2] = new CSquare(15);
-        shp[3] = new CTriangle(12, 7);
-        shp[4] = new CTriangle(3, 18);
+        shp[3] = new CSquare(15);
+        shp[4] = new CTriangle(12, 7);
+        shp[5] = new CTriangle(3, 18);
         CShape.largest(shp);
     }
 }

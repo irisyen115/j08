@@ -31,4 +31,4 @@ public class class09 {
         bb.display();
     }
 }
-// (c)先呼叫父類別
+// (c)先呼叫子類別

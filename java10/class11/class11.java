@@ -1,24 +1,13 @@
 package class11;
 
 class CShape {
-    protected int num;
-
     protected double area() {
         return 0.0;
     }
 
-    CShape(int _num) {
-        num = _num;
-    }
-
     static void largest(double cir, double squ, double tri) {
-        double[] sha = { cir, squ, tri };
-        double max = -1;
-        for (int i = 0; i < sha.length; i++) {
-            if (sha[i] > max) {
-                max = sha[i];
-            }
-        }
+        double max = Math.max(Math.max(cir, squ), tri);
+
         System.out.println("max area=" + max);
     }
 
@@ -36,39 +25,42 @@ class CShape {
 }
 
 class CCircle extends CShape {
-    protected double pi = 3.14;
+    private static double pi = 3.14;
+    private int radius;
 
     CCircle(int _num) {
-        super(_num);
+        radius = _num;
     }
 
     public double area() {
-        return num * num * pi;
+        return radius * radius * pi;
     }
 }
 
 class CSquare extends CShape {
+    private int edge;
 
     CSquare(int _num) {
-        super(_num);
+        edge = _num;
     }
 
     public double area() {
-        return num * num;
+        return edge * edge;
     }
 }
 
 class CTriangle extends CShape {
+    private int base;
     private int height;
 
     CTriangle(int _num, int _height) {
-        super(_num);
+        base = _num;
         height = _height;
 
     }
 
     public double area() {
-        return (num * height) / 2;
+        return (base * height) / 2;
     }
 }
 
