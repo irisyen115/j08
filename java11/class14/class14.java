@@ -10,28 +10,32 @@ abstract class CSphere implements iVolume {
     final double PI = 3.14;
     protected int x;
     protected int y;
+
+    // (c)
+    public abstract void showData();
+
+    public abstract double vol();
 }
 
-// (b)
+// (a)
 class CCircle extends CSphere {
-    private int radious;
+    private int radius;
 
-    CCircle(int _x, int _y, int _radious) {
+    CCircle(int _x, int _y, int _radius) {
         x = _x;
         y = _y;
-        radious = _radious;
+        radius = _radius;
     }
 
     public void showData() {
         System.out.println("球心:(" + x + "," + y + ")");
-        System.out.println("半徑:" + radious);
+        System.out.println("半徑:" + radius);
         System.out.println("球體積:" + vol());
     }
 
     public double vol() {
-        return (double) 4 / 3 * PI * radious * radious * radious;
+        return (double) 4 / 3 * PI * radius * radius * radius;
     }
-
 }
 
 public class class14 {
@@ -40,4 +44,4 @@ public class class14 {
         cir.showData();
     }
 }
-// (a) 因為抽象類別不會真的產生物質，可以當作iVolume介面的延伸
+// (b) 因為abstract class 不會真的產生物件，可以把CSphere當作iVolume interface 的延伸

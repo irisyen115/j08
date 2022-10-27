@@ -10,7 +10,7 @@ interface Test {
     public double calcu();
 }
 
-class CStu {
+class CStu implements Data, Test {
     protected String id;
     protected String name;
     protected int mid;
