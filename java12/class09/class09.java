@@ -7,7 +7,7 @@ public class class09 {
     public static void main(String[] args) {
         CSphere sphere = new CSphere(5);
         sphere.show();
-        CTrapezoid trapezoid = new CTrapezoid(5, 3, 7);
+        CTrapezoid trapezoid = new CTrapezoid(4, 3, 7);
         trapezoid.show();
     }
 }

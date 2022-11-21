@@ -8,6 +8,7 @@ public class CSphere {
     }
 
     public void show() {
-        System.out.println((double) 4 / 3 * 3.14 * radious);
+        System.out.println("radious=" + radious);
+        System.out.println("area=" + (double) 4 / 3 * 3.14 * radious * radious * radious);
     }
 }

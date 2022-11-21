@@ -7,4 +7,6 @@ public class class17 {
     }
 }
 
-// 印不出結果，因為short最多只能放正負各五位數
+// 印出結果Exception in thread "main" java.lang.NumberFormatException: Value out of
+// range. Value:"262904713" Radix:10，溢位了
+// 因為short為16位元數的型態，正負各最多只能放2 ^ 15 = 32768，而 262904713 若為short則會溢位

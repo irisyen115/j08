@@ -12,6 +12,9 @@ public class CTrapezoid {
     }
 
     public void show() {
-        System.out.println(((upper + base) * height) / 2);
+        System.out.println("upper=" + upper);
+        System.out.println("base=" + base);
+        System.out.println("height=" + height);
+        System.out.println("area=" + (double) ((upper + base) * height) / 2);
     }
 }
