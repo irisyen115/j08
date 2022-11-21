@@ -8,5 +8,6 @@ public class class17 {
 }
 
 // 印出結果Exception in thread "main" java.lang.NumberFormatException: Value out of
-// range. Value:"262904713" Radix:10，溢位了
+// range. Value:"262904713" Radix:10，溢位了 Short.MIN_VALUE=-32768
+// Short.MAX_VALUE=32767
 // 因為short為16位元數的型態，正負各最多只能放2 ^ 15 = 32768，而 262904713 若為short則會溢位
