@@ -3,7 +3,7 @@ package class14;
 public class class14 {
     public static void main(String[] args) {
         String s = "Habit is second nature.";
-        int a = s.indexOf("z");
-        System.out.println("s.substring(s.indexOf(\"nature\"))=" + s.substring(a));
+        // 如果nature不在s裡面，indexOf就會回傳-1，而-1無法substring任何東西
+        System.out.println("s.substring(s.indexOf(\"nature\"))=" + s.substring(s.indexOf("nature")));
     }
 }
