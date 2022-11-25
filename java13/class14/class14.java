@@ -15,18 +15,15 @@ class Cint {
     String a;
 
     public static void test(String a) throws IntegerTooSmall, IntegerTooLarge, InputMismatchException {
-        char arr[] = a.toCharArray();
-        for (int i = 0; i < arr.length; i++) {
-            if (!Character.isDigit(arr[i])) {
-                throw new InputMismatchException();
+        try {
+            int ai = Integer.parseInt(a);
+            if (ai < 10) {
+                throw new IntegerTooSmall();
+            } else if (ai > 70) {
+                throw new IntegerTooLarge();
             }
-        }
-        if (Integer.parseInt(a) < 10) {
-            throw new IntegerTooSmall();
-        } else if (Integer.parseInt(a) > 70) {
-            throw new IntegerTooLarge();
-        } else {
-            System.out.println(a);
+        } catch (NumberFormatException e) {
+            throw new InputMismatchException();
         }
     }
 }
