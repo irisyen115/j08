@@ -24,7 +24,8 @@ public class class13 {
         try {
             Ctest.test(s);
         } catch (Exception520 e) {
-            System.out.println("這是由字串 520所引起的例外");
+            System.out.println("這是由字串520所引起的例外");
         }
+        sc.close();
     }
 }

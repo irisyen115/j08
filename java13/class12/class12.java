@@ -29,10 +29,13 @@ public class class12 {
     public static void main(String args[]) {
         try {
             CTriangle.triangle(3, 3, 3);
+            // (a)
         } catch (NotTriangle e) {
             System.out.println("不構成三角形");
+            // (b)
         } catch (EquilateralTriangle e) {
             System.out.println("這是正三角形");
+            // (c)
         } catch (NotEquilateralTriangle e) {
             System.out.println("這不是正三角形");
         }

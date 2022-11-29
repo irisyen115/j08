@@ -30,13 +30,13 @@ public class class10 {
     public static void main(String[] args) {
         CCircle cir = new CCircle();
         try {
-            cir.setRadios(-2);
+            cir.setRadios(2);
+            cir.show();
         } catch (RadiusIsNegative e) {
             System.out.println(e + "throwed");
         } catch (RadiusIsToolarge e) {
             System.out.println(e + "throwed");
-        } finally {
-            cir.show();
         }
+
     }
 }

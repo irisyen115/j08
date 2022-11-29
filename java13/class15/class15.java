@@ -10,13 +10,12 @@ class ArgumentOutOfBound extends Exception {
 public class class15 {
     public static void main(String[] args) throws IOException {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Input a Integer: ");
+        int n = Integer.parseInt(buf.readLine());
         try {
-            System.out.print("Input a Integer: ");
-            int n = Integer.parseInt(buf.readLine());
             mySqrt(n);
         } catch (ArgumentOutOfBound e) {
-            System.out.println("n小於0");
-        } catch (IOException e) {
+            System.out.println(n + "小於0");
         }
     }
 
