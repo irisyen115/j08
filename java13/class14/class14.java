@@ -21,6 +21,8 @@ class Cint {
                 throw new IntegerTooSmall();
             } else if (ai > 70) {
                 throw new IntegerTooLarge();
+            } else {
+                System.out.println(ai);
             }
         } catch (NumberFormatException e) {
             throw new InputMismatchException();
@@ -32,14 +34,19 @@ public class class14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String a = sc.nextLine();
+        // (c)
         try {
             Cint.test(a);
+            // (a)
         } catch (IntegerTooSmall e) {
             System.out.println("您輸入的整數的值太小");
+            // (b)
         } catch (IntegerTooLarge e) {
             System.out.println("您輸入的整數的值太大");
+            // (d)
         } catch (InputMismatchException e) {
             System.out.println("您輸入的不是整數");
         }
+        sc.close();
     }
 }
