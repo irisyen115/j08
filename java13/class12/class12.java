@@ -1,5 +1,7 @@
 package class12;
 
+import java.util.Arrays;
+
 class NotTriangle extends Exception {
 }
 
@@ -15,7 +17,9 @@ class CTriangle {
     int c;
 
     public static void triangle(int a, int b, int c) throws NotTriangle, EquilateralTriangle, NotEquilateralTriangle {
-        if ((a + b) < c || (a + c) < b | (b + c) < a) {
+        int[] t = { a, b, c };
+        Arrays.sort(t);
+        if ((t[0] + t[1]) < t[2]) {
             throw new NotTriangle();
         } else if (a == b && a == c && b == c) {
             throw new EquilateralTriangle();
@@ -28,7 +32,7 @@ class CTriangle {
 public class class12 {
     public static void main(String args[]) {
         try {
-            CTriangle.triangle(3, 3, 3);
+            CTriangle.triangle(1, 5, 2);
             // (a)
         } catch (NotTriangle e) {
             System.out.println("不構成三角形");
