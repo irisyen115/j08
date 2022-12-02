@@ -8,10 +8,16 @@ public class class05 {
         for (int i = 0; i < 10; i++) {
             try {
                 System.out.println("ans=" + num / den[i]);
-            } catch (ArithmeticException | ArrayIndexOutOfBoundsException e) {
+            } catch (ArithmeticException e) {
                 System.out.println("除數為0");
+            } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("陣列索引值超出了範圍");
             }
+            // catch (ArithmeticException | ArrayIndexOutOfBoundsException e) {
+            // System.out.println("除數為0");
+            // System.out.println("陣列索引值超出了範圍");
+            // }
+
         }
     }
 }
