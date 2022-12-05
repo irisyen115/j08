@@ -17,4 +17,4 @@ public class class04 {
         fr.close();
     }
 }
-// (b) 不一樣，因為多了換行兩個/r/n，祥請見class04-(b).jpg
+// (b) 不一樣，因為多了換行兩個/r/n，詳情請見class04-(b).jpg
