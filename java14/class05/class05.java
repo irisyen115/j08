@@ -9,7 +9,7 @@ public class class05 {
         FileReader fr = new FileReader(".\\txt\\donkey.txt");
         BufferedReader bfr = new BufferedReader(fr);
         String str;
-        bfr.skip(9);
+        bfr.readLine();
         while ((str = bfr.readLine()) != null) {
             System.out.println(str);
         }
