@@ -12,9 +12,6 @@ class NotEquilateralTriangle extends Exception {
 }
 
 class CTriangle {
-    int a;
-    int b;
-    int c;
 
     public static void triangle(int a, int b, int c) throws NotTriangle, EquilateralTriangle, NotEquilateralTriangle {
         int[] t = { a, b, c };

@@ -12,7 +12,6 @@ class InputMismatchException extends Exception {
 }
 
 class Cint {
-    String a;
 
     public static void test(String a) throws IntegerTooSmall, IntegerTooLarge, InputMismatchException {
         try {
