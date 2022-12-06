@@ -13,7 +13,7 @@ public class class10 {
         BufferedWriter bfw = new BufferedWriter(fw);
 
         for (int i = 0; i < 1000; i++) {
-            String r = String.valueOf((int) ((Math.random()) * 100000));
+            String r = String.valueOf((int) (Math.random() * 100000) + 1);
             bfw.write(r);
             bfw.newLine();
         }
@@ -27,15 +27,14 @@ public class class10 {
 
         for (int i = 0; i < data.length; i++) {
             data[i] = Integer.parseInt(bfr.readLine());
-            System.out.println(data[i]);
         }
 
-        // (b)
         Arrays.sort(data);
         int sum = 0;
         for (int i = 0; i < data.length; i++) {
             sum += data[i];
         }
+        // (b)
         System.out.println("min=" + data[0]);
         System.out.println("max=" + data[data.length - 1]);
         System.out.println("avg=" + sum / (data.length));
