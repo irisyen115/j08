@@ -16,8 +16,7 @@ public class class08 {
         int num2 = fr2.read(data2);
         String str1 = new String(data1, 0, num1);
         String str2 = new String(data2, 0, num2);
-        fw.write(str1);
-        fw.write(str2);
+        fw.write(str1 + str2);
 
         fw.close();
         fr1.close();
