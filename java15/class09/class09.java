@@ -23,8 +23,8 @@ class CTest extends Thread {
 
 public class class09 {
     public static void main(String[] args) {
-        CTest t1 = new CTest("thread 1", 1000);
-        CTest t2 = new CTest("thread 2", 2500);
+        CTest t1 = new CTest("Thread 1", 1000);
+        CTest t2 = new CTest("Thread 2", 2500);
         t1.start();
         t2.start();
     }
