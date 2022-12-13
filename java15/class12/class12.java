@@ -11,7 +11,7 @@ class CTest extends Thread {
         for (int i = 1; i <= 5; i++) {
             for (int j = 0; j < 100000000; j++)
                 ;
-            System.out.println(id + " is running..Priority=" + this.getPriority());
+            System.out.println(id + " is running...");
         }
     }
 
@@ -24,14 +24,17 @@ public class class12 {
         CTest morning = new CTest("Good morning");
         CTest night = new CTest("Good night");
 
-        hi.setPriority(Thread.MAX_PRIORITY);
-        morning.setPriority(7);
-        night.setPriority(3);
-        bye.setPriority(Thread.MIN_PRIORITY);
-
         hi.start();
-        bye.start();
-        morning.start();
-        night.start();
+        try {
+            hi.join();
+            morning.start();
+            morning.join();
+            night.start();
+            night.join();
+            bye.start();
+            bye.join();
+        } catch (InterruptedException e) {
+        }
+        System.out.println("All Threads are finished");
     }
 }
