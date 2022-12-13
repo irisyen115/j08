@@ -1,9 +1,9 @@
 package class14;
 
 class PrePaid extends Thread {
-    private static int sum = 200;
+    private int sum = 200;
 
-    public synchronized static void talk(int n) {
+    public void talk(int n) {
         sum -= n;
         try {
             Thread.sleep((int) (1000 * Math.random()));
