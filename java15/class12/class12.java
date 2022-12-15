@@ -19,22 +19,22 @@ class CTest extends Thread {
 
 public class class12 {
     public static void main(String[] args) {
-        CTest hi = new CTest("Hello");
-        CTest bye = new CTest("Good bye");
-        CTest morning = new CTest("Good morning");
-        CTest night = new CTest("Good night");
+        CTest[] tests = {
+                new CTest("Hello"),
+                new CTest("Good bye"),
+                new CTest("Good morning"),
+                new CTest("Good night")
+        };
 
-        hi.start();
-        try {
-            hi.join();
-            morning.start();
-            morning.join();
-            night.start();
-            night.join();
-            bye.start();
-            bye.join();
-        } catch (InterruptedException e) {
+        for (int i = 0; i < tests.length; i++) {
+            tests[i].start();
+            try {
+                tests[i].join();
+            } catch (InterruptedException e) {
+            }
         }
+
+        //
         System.out.println("All Threads are finished");
     }
 }

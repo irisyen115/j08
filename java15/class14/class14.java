@@ -12,7 +12,7 @@ class PrePaid {
         sum = tmp - n;
         show(n);
     }
-    // 這樣子三個電話亭沒辦法同步扣款，會出現錯誤
+    // 這樣子第二個電話亭不會等第一個電話亭扣款完之後就行動，第三個電話亭不會等第二個電話亭扣款完之後就行動，以此類推，所以餘額一定會出現錯誤
 
     public synchronized void show(int n) {
         if (sum > 10) {
@@ -20,7 +20,7 @@ class PrePaid {
             System.out.println("sum= " + sum);
         }
     }
-
+    // 因為show有synchronized，所以執行緒可以排隊一個一個印出來
 }
 
 class Phone extends Thread {
