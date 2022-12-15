@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class class11 {
     public static void main(String[] args) throws IOException {
-        FileInputStream fi = new FileInputStream(".\\txt\\number.txt");
+        FileInputStream fi = new FileInputStream("./txt/number.txt");
         byte[] ba = new byte[fi.available()];
 
         fi.read(ba);

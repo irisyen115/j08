@@ -9,9 +9,9 @@ public class class09 {
         char[] data1 = new char[128];
         char[] data2 = new char[128];
 
-        FileReader fr = new FileReader(".\\txt\\ccc.txt");
-        FileReader fr1 = new FileReader(".\\txt\\aaa.txt");
-        FileReader fr2 = new FileReader(".\\txt\\bbb.txt");
+        FileReader fr = new FileReader("./txt/ccc.txt");
+        FileReader fr1 = new FileReader("./txt/aaa.txt");
+        FileReader fr2 = new FileReader("./txt/bbb.txt");
 
         int num1 = fr1.read(data1);
         int num2 = fr2.read(data2);

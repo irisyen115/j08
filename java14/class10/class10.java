@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class class10 {
     public static void main(String[] args) throws IOException {
-        FileWriter fw = new FileWriter(".\\txt\\rand.txt");
+        FileWriter fw = new FileWriter("./txt/rand.txt");
         BufferedWriter bfw = new BufferedWriter(fw);
 
         for (int i = 0; i < 1000; i++) {
@@ -21,7 +21,7 @@ public class class10 {
         bfw.flush();
         fw.close();
 
-        FileReader fr = new FileReader(".\\txt\\rand.txt");
+        FileReader fr = new FileReader("./txt/rand.txt");
         BufferedReader bfr = new BufferedReader(fr);
         int[] data = new int[1000];
 
@@ -40,7 +40,7 @@ public class class10 {
         System.out.println("avg=" + sum / (data.length));
 
         // (c)
-        FileWriter fw2 = new FileWriter(".\\txt\\rand2.txt");
+        FileWriter fw2 = new FileWriter("./txt/rand2.txt");
         BufferedWriter bfw2 = new BufferedWriter(fw2);
 
         for (int i = 0; i < data.length; i++) {

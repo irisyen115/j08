@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class class07 {
     public static void main(String[] args) throws IOException {
-        FileReader fr = new FileReader(".\\txt\\donkey.txt");
+        FileReader fr = new FileReader("./txt/donkey.txt");
         BufferedReader bfr = new BufferedReader(fr);
         String str;
         int count = 0;
