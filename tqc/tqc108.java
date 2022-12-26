@@ -16,7 +16,7 @@ public class tqc108 {
     public static void main(String[] args) {
         System.out.println("Adding two integers:2,3");
         System.out.println("Adding two doubles:5.2,4.3");
-        System.out.println("Adding two strings: I love ,java!!");
-        System.out.println(Ctest.add(2, 3) + " " + Ctest.add(5.2, 4.3) + " " + Ctest.add("I love", "java!!"));
+        System.out.println("Adding two strings: I love ,Java!!");
+        System.out.println(Ctest.add(2, 3) + " " + Ctest.add(5.2, 4.3) + " " + Ctest.add("I love ", "Java!!"));
     }
 }
