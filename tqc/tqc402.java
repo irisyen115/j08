@@ -7,7 +7,7 @@ public class tqc402 {
         while (n >= 0) {
             System.out.println("Input n (0 <= n <= 16):");
             n = sc.nextInt();
-            if (n >= 16) {
+            if (n > 16) {
                 break;
             }
             int count = 1;
@@ -22,9 +22,6 @@ public class tqc402 {
 
     public static int fac(int n) {
         if (n == 0) {
-            return 1;
-        }
-        if (n == 1) {
             return 1;
         } else {
             return n * fac(n - 1);
