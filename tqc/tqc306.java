@@ -10,13 +10,17 @@ public class tqc306 {
         int n = 0;
         while (m >= 0) {
             System.out.println("Input:");
+            int ans = 1;
             t = bf.readLine().split(" ");
             m = Integer.parseInt(t[0]);
             n = Integer.parseInt(t[1]);
             if (m == 999) {
                 break;
             }
-            System.out.println((int) (Math.pow(m, n)));
+            for (int i = 0; i < n; i++) {
+                ans *= m;
+            }
+            System.out.println(ans);
         }
     }
 }
