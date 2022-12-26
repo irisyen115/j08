@@ -11,9 +11,6 @@ public class tqc402 {
                 break;
             }
             int count = 1;
-            if (n == 0) {
-                count = 0;
-            }
             for (int i = 1; i < n + 1; i++) {
                 count *= i;
             }
@@ -25,7 +22,7 @@ public class tqc402 {
 
     public static int fac(int n) {
         if (n == 0) {
-            return 0;
+            return 1;
         }
         if (n == 1) {
             return 1;
