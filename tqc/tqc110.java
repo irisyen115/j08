@@ -1,26 +1,26 @@
 class CShape {
-    public static String calCircle() {
-        return String.format("%.6f", (5 * 5 * 3.1415926));
+    public static double calCircle(double r) {
+        return r * r * 3.1415926;
     }
 
-    public static String calTriangle() {
-        return String.format("%.6f", (double) ((10 * 5) / 2));
+    public static double calTriangle(double b, double h) {
+        return (b * h) / 2;
     }
 
-    public static String calRectangle() {
-        return String.format("%.6f", (double) (5 * 10));
+    public static double calRectangle(double w, double h) {
+        return w * h;
     }
 
-    public static String show() {
-        return String.format("%.6f", (5 * 5 * 3.1415926) + (double) ((10 * 5) / 2) + (double) (5 * 10));
-    }
 }
 
 public class tqc110 {
     public static void main(String[] args) {
-        System.out.println("圓形面積為: " + CShape.calCircle());
-        System.out.println("三角形面積為: " + CShape.calTriangle());
-        System.out.println("方形面積為: " + CShape.calRectangle());
-        System.out.println("圖形面積為: " + CShape.show());
+        double carea = CShape.calCircle(5);
+        double tarea = CShape.calTriangle(10, 5);
+        double rarea = CShape.calRectangle(5, 10);
+        System.out.println("圓形面積為: " + String.format("%.6f", carea));
+        System.out.println("三角形面積為: " + String.format("%.6f", tarea));
+        System.out.println("方形面積為: " + String.format("%.6f", rarea));
+        System.out.println("圖形面積為: " + String.format("%.6f", (carea + tarea + rarea)));
     }
 }
