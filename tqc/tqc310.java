@@ -7,8 +7,8 @@ public class tqc310 {
         do {
             System.out.println("請輸入n的值(n > 0，且為偶數)");
             n = sc.nextInt();
-        } while (n % 2 != 0);
-        System.out.println("2 + 4 + 6 + ... + n = " + ((2 + n) * (n / 2)) / 2);
+        } while (n < 0 || n % 2 != 0);
+        System.out.println("2 + 4 + 6 + ... + n = " + ((2 + n) * ((n - 2) / 2 + 1)) / 2);
         sc.close();
     }
 }
