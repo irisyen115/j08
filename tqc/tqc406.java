@@ -8,13 +8,14 @@ public class tqc406 {
             String s = sc.nextLine();
             System.out.println(s + " has " + findA(s) + " As");
         }
+        sc.close();
     }
 
     public static int findA(String s) {
         if (s.length() == 0) {
             return 0;
         } else {
-            return ((s.charAt(0) == 'A') ? 1 : 0) + (findA(s.substring(1, s.length())));
+            return ((s.charAt(0) == 'A') ? 1 : 0) + findA(s.substring(1, s.length()));
         }
     }
 }
