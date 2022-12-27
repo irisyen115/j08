@@ -1,22 +1,48 @@
 class LCD {
-    public static double ten = 2000;
-    public static double fifteen = 2500;
-    public static double seventeen = 3000;
+    double cost;
+
+    LCD(int i) {
+        if (i == 10) {
+            cost = 2000;
+        } else if (i == 15) {
+            cost = 2500;
+        } else {
+            cost = 3000;
+        }
+    }
 }
 
 class CPU {
-    public static double slow166 = 6000;
-    public static double midiun22 = 8000;
-    public static double fast24 = 11000;
+    double cost;
+
+    CPU(double i) {
+        if (i == 1.66) {
+            cost = 6000;
+        } else if (i == 2.2) {
+            cost = 8000;
+        } else {
+            cost = 11000;
+        }
+    }
 }
 
 class HD {
-    public static double twelve = 2400;
-    public static double sixteen = 2800;
+    double cost;
+
+    HD(int i) {
+        if (i == 120) {
+            cost = 2400;
+        } else {
+            cost = 2800;
+        }
+    }
 }
 
 class MiniNote {
-    public double mcost = LCD.ten + CPU.slow166 + HD.twelve;
+    LCD lcd = new LCD(10);
+    CPU cpu = new CPU(1.66);
+    HD hd = new HD(120);
+    public double mcost = lcd.cost + cpu.cost + hd.cost;
 
     public double getCost() {
         return mcost * 1.4;
@@ -28,7 +54,10 @@ class MiniNote {
 }
 
 class Note15 {
-    public double ncost = LCD.fifteen + CPU.midiun22 + HD.sixteen;
+    LCD lcd = new LCD(15);
+    CPU cpu = new CPU(2.2);
+    HD hd = new HD(160);
+    public double ncost = lcd.cost + cpu.cost + hd.cost;
 
     public double getCost() {
         return ncost * 1.4;
@@ -36,36 +65,6 @@ class Note15 {
 
     public double getPrice() {
         return ncost * 2.0;
-    }
-}
-
-class PC {
-    public double pcost = CPU.fast24 + HD.sixteen;
-
-    public double getCost() {
-        return pcost + 500;
-    }
-
-    public double getPrice() {
-        return pcost * 1.8;
-    }
-}
-
-class Multipc {
-    double cn;
-    double hn;
-
-    Multipc(double c, double h) {
-        cn = c;
-        hn = h;
-    }
-
-    public double getCost() {
-        return (cn * CPU.fast24) + (hn * HD.sixteen) * 1.2;
-    }
-
-    public double getPrice() {
-        return (cn * CPU.fast24) + (hn * HD.sixteen) * 1.8;
     }
 }
 
