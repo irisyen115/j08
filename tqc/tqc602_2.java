@@ -1,5 +1,7 @@
 class PC {
-    public double pcost = CPU.fast24 + HD.sixteen;
+    CPU cpu = new CPU(2.4);
+    HD hd = new HD(160);
+    public double pcost = cpu.cost + hd.cost;
 
     public double getCost() {
         return pcost + 500;
@@ -14,17 +16,20 @@ class Multipc {
     double cn;
     double hn;
 
+    CPU cpu = new CPU(2.4);
+    HD hd = new HD(160);
+
     Multipc(double c, double h) {
         cn = c;
         hn = h;
     }
 
     public double getCost() {
-        return (cn * CPU.fast24) + (hn * HD.sixteen) * 1.2;
+        return (cn * cpu.cost) + (hn * hd.cost) * 1.2;
     }
 
     public double getPrice() {
-        return (cn * CPU.fast24) + (hn * HD.sixteen) * 1.8;
+        return (cn * cpu.cost) + (hn * hd.cost) * 1.8;
     }
 }
 
